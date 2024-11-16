@@ -1,13 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `master` branch
   push:
     branches: [ master ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -17,15 +14,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout your repository
         uses: actions/checkout@v4
-      
-      - name: Install, build, and upload your site
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22 # Adjust to the version used locally
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build your site
+        run: npm run build
+
+      - name: Create .nojekyll
+        run: echo "" > .nojekyll
+
+      - name: Upload your site
         uses: withastro/action@v1
-        # with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          # node-version: 18 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
-          # package-manager: pnpm # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+        with:
+          path: . # The root location of your Astro project
 
   deploy:
     needs: build
