@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Hello Insurance",
-    "base_url": "https://helloinsurance.dev",
-    "base_path": "/",
+    "base_url": "https://hello-insurance.github.io",
+    "base_path": "/hello-insurance-web",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
