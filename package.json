@@ -1,8 +1,8 @@
 {
-  "name": "pinwheel-astro",
+  "name": "hello-insurance-web",
   "version": "2.0.1",
   "description": "Astro and Tailwindcss boilerplate",
-  "author": "themefisher",
+  "author": "HelloInsurance",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {

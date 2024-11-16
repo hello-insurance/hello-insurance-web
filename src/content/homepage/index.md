@@ -4,8 +4,8 @@ banner:
   content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
   image: /images/banner-img.png
   button:
-    label: Download The Theme
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    label: Get Started
+    link: "https://helloinsurance.dev"
     enable: true
 
 ##key features
