@@ -36,6 +36,7 @@ jobs:
         with:
           path: . # The root location of your Astro project
 
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
